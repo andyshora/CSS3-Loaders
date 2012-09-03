@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS3 Loaders</title>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+<style>
+.type_label {
+	text-align: center;
+}
+.row > div {
+	text-align: center;
+}
+
+
+/* KEYFRAME ANIMATIONS - required by all spinning loaders */
+
+@-webkit-keyframes rotate360 {
+  from 	{ -webkit-transform: rotate(0deg); }
+  to 	{ -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes rotate360 {
+  from 	{ -moz-transform: rotate(0deg); }
+  to 	{ -moz-transform: rotate(360deg); }
+}
+@keyframes rotate360 {
+  from 	{ transform: rotate(0deg); }
+  to 	{ transform: rotate(360deg); }
+}
+
+/* END KEYFRAME ANIMATIONS */
+
+
+
+.loader_1a_wrap {
+	height:50px;
+	width:50px;
+	text-align: center;
+	margin:10px auto;
+}
+.loader_1a_square {
+	height:30px;
+	width:30px;
+	background:lightBlue;
+	margin:0 auto;
+
+	-webkit-animation: rotate360 1s ease-out infinite;
+	   -moz-animation: rotate360 1s ease-out infinite;
+	 		animation: rotate360 1s ease-out infinite;
+}
+
+.loader_1b_wrap {
+	height:50px;
+	width:50px;
+	text-align: center;
+	margin:10px auto;
+}
+.loader_1b_square {
+	height:30px;
+	width:30px;
+	background:lightBlue;
+	margin:0 auto;
+
+	-webkit-animation: rotate360 2s linear infinite;
+	   -moz-animation: rotate360 2s linear infinite;
+	 		animation: rotate360 2s linear infinite;
+}
+
+
+
+
+.loader_2a_wrap {
+	height:50px;
+	width:50px;
+	text-align: center;
+	margin:10px auto;
+	position:relative;
+}
+
+.loader_2a_circle {
+	height:40px;
+	width: 40px;
+	border-radius: 20px;
+	background:lightBlue;
+	margin:0 auto;
+
+	
+}
+.loader_2a_circle_inner {
+	background: white;
+	height: 30px;
+	width: 30px;
+	margin: 5px auto;
+	position: relative;
+	top: 4px;
+	-webkit-animation: rotate360 2s linear infinite;
+	   -moz-animation: rotate360 2s linear infinite;
+	 		animation: rotate360 2s linear infinite;
+}
+.loader_2a_circle_inner_inner {
+	background: white;
+	height: 30px;
+	width: 30px;
+
+	   -moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+		 -o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+}
+
+</style>
+</head>
+<body>
+<div id="body_wrap" class="container">
+		<h1>CSS3 Loaders</h3>
+		<p>Decent loaders that only work in decent browsers.</p>
+	
+	<div class="row">
+		<div class="span2">
+			<!-- START: loader 1a markup -->
+			<div class="loader_1a_wrap">
+				<div class="loader_1a_square"></div>
+			</div>
+			<!-- END: loader 1a markup -->
+			<p class="type_label">Easing</p>
+			<button class="btn btn-mini reveal_code" onclick="grab_code('1a')">grab code</button>
+		</div>
+		<div class="span3">
+			<!-- START: loader 1b markup -->
+			<div class="loader_1b_wrap">
+				<div class="loader_1b_square"></div>
+			</div>
+			<!-- END: loader 1b markup -->
+			<p class="type_label">Linear</p>
+			<button class="btn btn-mini reveal_code" onclick="grab_code('1b')">grab code</button>
+		</div>
+		<div class="span3"></div>
+	</div>
+
+
+	<div class="row">
+		<div class="span2">
+			<!-- START: loader 2a markup -->
+			<div class="loader_2a_wrap">
+				<div class="loader_2a_circle">
+					<div class="loader_2a_circle_inner"><div class="loader_2a_circle_inner_inner"></div></div>
+				</div>
+			</div>
+			<!-- END: loader 2a markup -->
+			<p class="type_label">Easing</p>
+			<button class="btn btn-mini reveal_code" onclick="grab_code('2a')">grab code</button>
+		</div>
+		<div class="span3"></div>
+		<div class="span3"></div>
+	</div>
+	
+
+</div>
+</body>
+</html>
